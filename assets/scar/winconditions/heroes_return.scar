@@ -34,6 +34,9 @@ Core_RegisterModule(_mod.module)
 -- Scripting framework 
 -----------------------------------------------------------------------
 
+local heroes_threshold = 0.1
+local heroes_resource = 5000
+
 -- Called during load as part of the game setup sequence
 function Mod_OnGameSetup()
 	
@@ -79,5 +82,24 @@ function Mod_OnEntityKilled(context)
 		return
 	end
 	local pop = Player_GetPopulationPercentage(player, CT_Personnel)
-	print(pop)
+	if pop > heroes_threshold then
+		return
+	end
+	local resources = Player_GetResources(player)
+	local list = {
+		resources["food"],
+		resources["wood"],
+		resources["gold"],
+		resources["stone"],
+	}
+	for _, v in ipairs(list) do
+		if v > heroes_resource then
+			return
+		end
+	end
+
+	Player_AddResource(player, RT_Food, heroes_resource)
+	Player_AddResource(player, RT_Wood, heroes_resource)
+	Player_AddResource(player, RT_Gold, heroes_resource)
+	Player_AddResource(player, RT_Stone, heroes_resource)
 end
