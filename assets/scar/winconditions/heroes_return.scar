@@ -70,9 +70,7 @@ end
 
 -- When a victory condition is met, a module must call Core_OnGameOver() in order to invoke this delegate and notify all modules that the match is about to end. Generally used for clean up (removal of rules, objectives, and UI elements specific to the module).
 function Mod_OnGameOver()
-	
-	
-	
+	Rule_RemoveGlobalEvent(Mod_OnEntityKilled)
 end
 
 function Mod_OnEntityKilled(context)
