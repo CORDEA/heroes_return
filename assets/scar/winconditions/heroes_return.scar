@@ -51,9 +51,7 @@ end
 
 -- Called on match initialization before handing control to the player
 function Mod_OnInit()
-	
-	
-	
+	Rule_AddGlobalEvent(Mod_OnEntityKilled, GE_EntityKilled)
 end
 
 -- Called after initialization is done when game is fading up from black
@@ -75,4 +73,13 @@ function Mod_OnGameOver()
 	
 	
 	
+end
+
+function Mod_OnEntityKilled(context)
+	local player = context.victimOwner
+	if player == nil then
+		return
+	end
+	local pop = Player_GetPopulationPercentage(player, CT_Personnel)
+	print(pop)
 end
