@@ -43,60 +43,7 @@
 			<DataValue Name="PrecacheList">4737920656334460206</DataValue>
 			<!--WinCondition/PrecacheList/-->
 			<DataObject Name="" Type="PrecacheList" Id="4737920656334460206" OwnerId="4889241123373067392">
-				<DataProperty Name="m_precacheItems" Type="Object">
-					<DataValue Name="SquadPrecacheItem">16039570642579385339</DataValue>
-					<DataValue Name="SquadPrecacheItem">7509750559211191348</DataValue>
-					<DataValue Name="SquadPrecacheItem">15381287648381653962</DataValue>
-					<DataValue Name="SquadPrecacheItem">16046517501164645640</DataValue>
-					<!--WinCondition/PrecacheList/SquadPrecacheItem/-->
-					<DataObject Name="" Type="SquadPrecacheItem" Id="7509750559211191348" OwnerId="4737920656334460206">
-						<DataProperty Name="#BaseTypes" Type="String" Value="IPrecacheItem#0|"/>
-						<DataProperty Name="m_blueprint" Type="Object">
-							<DataValue Name="ReflectPBG_SquadProperties">4492683947651135842</DataValue>
-							<!--WinCondition/PrecacheList/SquadPrecacheItem/ReflectPBG_SquadProperties/-->
-							<DataObject Name="" Type="ReflectPBG_SquadProperties" Id="4492683947651135842" OwnerId="7509750559211191348">
-								<DataProperty Name="#BaseTypes" Type="String" Value="PropertyBagGroupReflectReference#0|Provider_PropertyBagGroup#0|"/>
-								<DataProperty Name="m_fileName" Type="String" Value="unit_knight_4"/>
-							</DataObject>
-						</DataProperty>
-					</DataObject>
-					<!--WinCondition/PrecacheList/SquadPrecacheItem/-->
-					<DataObject Name="" Type="SquadPrecacheItem" Id="15381287648381653962" OwnerId="4737920656334460206">
-						<DataProperty Name="#BaseTypes" Type="String" Value="IPrecacheItem#0|"/>
-						<DataProperty Name="m_blueprint" Type="Object">
-							<DataValue Name="ReflectPBG_SquadProperties">444482107194272923</DataValue>
-							<!--WinCondition/PrecacheList/SquadPrecacheItem/ReflectPBG_SquadProperties/-->
-							<DataObject Name="" Type="ReflectPBG_SquadProperties" Id="444482107194272923" OwnerId="15381287648381653962">
-								<DataProperty Name="#BaseTypes" Type="String" Value="PropertyBagGroupReflectReference#0|Provider_PropertyBagGroup#0|"/>
-								<DataProperty Name="m_fileName" Type="String" Value="unit_manatarms_4"/>
-							</DataObject>
-						</DataProperty>
-					</DataObject>
-					<!--WinCondition/PrecacheList/SquadPrecacheItem/-->
-					<DataObject Name="" Type="SquadPrecacheItem" Id="16039570642579385339" OwnerId="4737920656334460206">
-						<DataProperty Name="#BaseTypes" Type="String" Value="IPrecacheItem#0|"/>
-						<DataProperty Name="m_blueprint" Type="Object">
-							<DataValue Name="ReflectPBG_SquadProperties">9639215312280558415</DataValue>
-							<!--WinCondition/PrecacheList/SquadPrecacheItem/ReflectPBG_SquadProperties/-->
-							<DataObject Name="" Type="ReflectPBG_SquadProperties" Id="9639215312280558415" OwnerId="16039570642579385339">
-								<DataProperty Name="#BaseTypes" Type="String" Value="PropertyBagGroupReflectReference#0|Provider_PropertyBagGroup#0|"/>
-								<DataProperty Name="m_fileName" Type="String" Value="unit_crossbowman_4"/>
-							</DataObject>
-						</DataProperty>
-					</DataObject>
-					<!--WinCondition/PrecacheList/SquadPrecacheItem/-->
-					<DataObject Name="" Type="SquadPrecacheItem" Id="16046517501164645640" OwnerId="4737920656334460206">
-						<DataProperty Name="#BaseTypes" Type="String" Value="IPrecacheItem#0|"/>
-						<DataProperty Name="m_blueprint" Type="Object">
-							<DataValue Name="ReflectPBG_SquadProperties">14243343635853406280</DataValue>
-							<!--WinCondition/PrecacheList/SquadPrecacheItem/ReflectPBG_SquadProperties/-->
-							<DataObject Name="" Type="ReflectPBG_SquadProperties" Id="14243343635853406280" OwnerId="16046517501164645640">
-								<DataProperty Name="#BaseTypes" Type="String" Value="PropertyBagGroupReflectReference#0|Provider_PropertyBagGroup#0|"/>
-								<DataProperty Name="m_fileName" Type="String" Value="unit_monk_3"/>
-							</DataObject>
-						</DataProperty>
-					</DataObject>
-				</DataProperty>
+				<DataProperty Name="m_precacheItems" Type="Object"/>
 			</DataObject>
 		</DataProperty>
 		<DataProperty Name="m_name" Type="String" Value="heroes_return"/>

@@ -55,6 +55,16 @@ end
 -- Called on match initialization before handing control to the player
 function Mod_OnInit()
 	Rule_AddGlobalEvent(Mod_OnEntityKilled, GE_EntityKilled)
+
+	for _, player in pairs(PLAYERS) do
+		-- This is not a number.
+		local id = player.id
+		local code = Mod_ResolveRaceCode(id)
+		Squad_Precache(BP_GetSquadBlueprint("unit_manatarms_4_" .. code), 0, id, "", "", "")
+		Squad_Precache(BP_GetSquadBlueprint("unit_crossbowman_4_" .. code), 0, id, "", "", "")
+		Squad_Precache(BP_GetSquadBlueprint("unit_knight_4_" .. code), 0, id, "", "", "")
+		Squad_Precache(BP_GetSquadBlueprint("unit_monk_3_" .. code), 0, id, "", "", "")
+	end
 end
 
 -- Called after initialization is done when game is fading up from black
