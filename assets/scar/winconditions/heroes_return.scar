@@ -103,3 +103,24 @@ function Mod_OnEntityKilled(context)
 	Player_AddResource(player, RT_Gold, heroes_resource)
 	Player_AddResource(player, RT_Stone, heroes_resource)
 end
+
+local race_table = {
+	abbasid = "abb",
+	chinese = "chi",
+	english = "eng",
+	french = "fre",
+	hre = "hre",
+	mongol = "mon",
+	rus = "rus",
+	sultanate = "sul",
+}
+
+function Mod_ResolveRaceCode(player)
+	local name = Player_GetRaceName(player)
+	for k, v in pairs(race_table) do
+		if k == name then
+			return v
+		end
+	end
+	error("Receives unknown code.")
+end
