@@ -112,6 +112,24 @@ function Mod_OnEntityKilled(context)
 	Player_AddResource(player, RT_Wood, heroes_resource)
 	Player_AddResource(player, RT_Gold, heroes_resource)
 	Player_AddResource(player, RT_Stone, heroes_resource)
+
+	Mod_DeployHeroes(player)
+end
+
+function Mod_DeployHeroes(player)
+	local code = Mod_ResolveRaceCode(player)
+	Mod_DeployHero(player, "unit_manatarms_4_" .. code, 24)
+	Mod_DeployHero(player, "unit_crossbowman_4_" .. code, 16)
+	Mod_DeployHero(player, "unit_knight_4_" .. code, 8)
+	Mod_DeployHero(player, "unit_monk_3_" .. code, 2)
+end
+
+function Mod_DeployHero(player, name, num)
+	local group_name = "heroes_" .. name .. tostring(player.id)
+	local sgroup = SGroup_CreateIfNotFound(group_name)
+	local position = Player_GetStartingPosition(player)
+	local units = {{sbp = BP_GetSquadBlueprint(name), numSquads = num}}
+	UnitEntry_DeploySquads(player, sgroup, units, position)
 end
 
 local race_table = {
